@@ -9,8 +9,8 @@ arr.find((num, index) => {
     return false;
 });
 
-if (foundIndex !== -1) {
-    console.log(foundIndex);
+if () {
+    
 }
 var arr = [1, 2, 5, 6, 7, 8, 9, 6, 3, 6];
 
