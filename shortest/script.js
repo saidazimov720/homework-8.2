@@ -10,7 +10,7 @@ if (cmd == "a-z") {
     var form2 = arr.sort().reverse();
     alert(form2);
 } else if (cmd == "0-9") {
-    var form3 = arr.sort((a, b) => a - b);
-} else{
+    var form3 = arr.sort((a, b) => Number(a) - Number(b));
+} else {
     alert("invalid value");
 }
