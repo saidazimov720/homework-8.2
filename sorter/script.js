@@ -35,10 +35,11 @@ if (cmd == "a-z") {
     alert(form2.join(', '));
 } else if (cmd == "0-9") {
     var numbersonly = arr.filter(item => !isNaN(item));
-    var form3 = arr.sort((a, b) => Number(a) - Number(b));
+    var form3 = numbersonly.sort((a, b) => Number(a) - Number(b));
     alert(form3.join(', '));
 } else if (cmd == "9-0") {
-    var form4 = arr.sort((a, b) => Number(b) - Number(a));
+    var numbersonly = arr.filter(item => !isNaN(item));
+    var form4 = numbersonly.sort((a, b) => Number(b) - Number(a));
     alert(form4.join(', '));
 } else {
     alert("invalid value");
