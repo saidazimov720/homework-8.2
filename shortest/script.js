@@ -6,8 +6,12 @@ arr.find((num, index) => {
     if (num === target) {
         foundIndex = index;
     }
-    
-})
+    return false;
+});
+
+if (foundIndex !== -1) {
+    console.log(foundIndex);
+}
 var arr = [1, 2, 5, 6, 7, 8, 9, 6, 3, 6];
 
 var foundElem = arr.find(findElem);
