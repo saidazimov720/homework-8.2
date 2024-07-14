@@ -2,7 +2,7 @@ var str = prompt("Enter the array for sorting:");
 var cmd = prompt("Enter the sort format");
 var arr = str.split(',');
 
-function sort(a,b) {
+function specialsort(a,b) {
     if (!isNaN(a) && !isNaN(b)) {
         return Number(a) - Number(b);
     } else if(!isNaN(a) && isNaN(b)){
@@ -14,7 +14,7 @@ function sort(a,b) {
     }
 }
 
-function sortreverse(a,b) {
+function specialsortreverse(a,b) {
     if (!isNaN(a) && !isNaN(b)) {
         return Number(b) - Number(a);
     } else if(!isNaN(a) && isNaN(b)){
@@ -22,17 +22,16 @@ function sortreverse(a,b) {
     } else if(isNaN(a) && !isNaN(b)){
         return 1;
     } else{
-        b.localeCompare(a);
+       return b.localeCompare(a);
     }
 }
 
 if (cmd == "a-z") {
-    var form1 = arr.sort();
+    var form1 = arr.sort(specialsort);
     alert(form1.join(', '));
 } else if (cmd == "z-a") {
-    var form2 = arr.sort().reverse();
-    var strform2 = form2.toString();
-    alert(strform2.join(', '));
+    var form2 = arr.sort(specialsortreverse);
+    alert(form2.join(', '));
 } else if (cmd == "0-9") {
     var form3 = arr.sort((a, b) => Number(a) - Number(b));
     alert(form3.join(', '));
