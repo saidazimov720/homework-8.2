@@ -3,7 +3,11 @@ var cmd = prompt("Enter the sort format");
 var arr = str.split(',');
 
 function sort(a,b) {
-    
+    if (!isNaN(a) && !isNaN(b)) {
+        return Number(a) - Number(b);
+    } else if(){
+        
+    }
 }
 
 if (cmd == "a-z") {
