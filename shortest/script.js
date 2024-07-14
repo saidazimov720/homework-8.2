@@ -14,6 +14,18 @@ function sort(a,b) {
     }
 }
 
+function sortreverse(a,b) {
+    if (!isNaN(a) && !isNaN(b)) {
+        return Number(b) - Number(a);
+    } else if(!isNaN(a) && isNaN(b)){
+        return -1;
+    } else if(isNaN(a) && !isNaN(b)){
+        return 1;
+    } else{
+        b.localeCompare(a);
+    }
+}
+
 if (cmd == "a-z") {
     var form1 = arr.sort();
     alert(form1.join(', '));
