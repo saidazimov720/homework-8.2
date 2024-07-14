@@ -2,28 +2,28 @@ var str = prompt("Enter the array for sorting:");
 var cmd = prompt("Enter the sort format");
 var arr = str.split(',');
 
-function specialsort(a,b) {
+function specialsort(a, b) {
     if (!isNaN(a) && !isNaN(b)) {
         return Number(a) - Number(b);
-    } else if(!isNaN(a) && isNaN(b)){
+    } else if (!isNaN(a) && isNaN(b)) {
         return 1;
-    } else if(isNaN(a) && !isNaN(b)){
+    } else if (isNaN(a) && !isNaN(b)) {
         return -1;
-    } else{
-        return a.localeCompare(b);    
+    } else {
+        return a.localeCompare(b);
     }
 }
 
-function specialsortreverse(a,b) {
+function specialsortreverse(a, b) {
     if (!isNaN(a) && !isNaN(b)) {
         return Number(b) - Number(a);
-    } else if(!isNaN(a) && isNaN(b)){
+    } else if (!isNaN(a) && isNaN(b)) {
         return -1;
-    } else if(isNaN(a) && !isNaN(b)){
+    } else if (isNaN(a) && !isNaN(b)) {
         return 1;
-    } else{
-        
-       return b.localeCompare(a);
+    } else {
+
+        return b.localeCompare(a);
     }
 }
 
@@ -31,7 +31,7 @@ if (cmd == "a-z") {
     var form1 = arr.sort(specialsort);
     alert(form1.join(', '));
 } else if (cmd == "z-a") {
-    var form2 = arr.sort(specialsortreverse);
+    var form2 = arr.sort(specialsortreverse); 
     alert(form2.join(', '));
 } else if (cmd == "0-9") {
     var form3 = arr.sort((a, b) => Number(a) - Number(b));
