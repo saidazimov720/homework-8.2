@@ -34,6 +34,7 @@ if (cmd == "a-z") {
     var form2 = arr.sort(specialsortreverse); 
     alert(form2.join(', '));
 } else if (cmd == "0-9") {
+    var numbersonly = arr.filter(item => !isNaN(item));
     var form3 = arr.sort((a, b) => Number(a) - Number(b));
     alert(form3.join(', '));
 } else if (cmd == "9-0") {
