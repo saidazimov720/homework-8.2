@@ -28,19 +28,21 @@ function specialsortreverse(a, b) {
 }
 
 if (cmd == "a-z:0-9") {
-    var form1 = arr.sort(specialsort);
+    var form1 = arr.slice();
+    form1.sort(specialsort);
     alert(form1.join(', '));
 } else if (cmd == "z-a:9-0") {
-    var form2 = arr.sort(specialsortreverse);
+    var form2 = arr.slice();
+    form2.sort(specialsortreverse);
     alert(form2.join(', '));
 } else if (cmd == "a-z") {
     var charsOnly = arr.filter(item => !isNaN(item));
-    var form3 = charsOnly.sort((a, b) => a - b);
+    var form3 = charsOnly.sort();
     alert(form3);
 }
 else if (cmd == "z-a") {
     var charsOnly = arr.filter(item => !isNaN(item));
-    var form3 = charsOnly.sort((a, b) => b - a);
+    var form3 = charsOnly.sort().reverse();
     alert(form3);
 }
 else if (cmd == "0-9") {
