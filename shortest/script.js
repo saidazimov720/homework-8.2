@@ -5,8 +5,12 @@ var arr = str.split(',');
 function sort(a,b) {
     if (!isNaN(a) && !isNaN(b)) {
         return Number(a) - Number(b);
-    } else if(){
-        
+    } else if(!isNaN(a) && isNaN(b)){
+        return 1;
+    } else if(isNaN(a) && !isNaN(b)){
+        return -1;
+    } else{
+        return a.localeCompare(b);    
     }
 }
 
