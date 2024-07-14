@@ -22,6 +22,7 @@ function specialsortreverse(a,b) {
     } else if(isNaN(a) && !isNaN(b)){
         return 1;
     } else{
+        
        return b.localeCompare(a);
     }
 }
