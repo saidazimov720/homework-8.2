@@ -9,8 +9,11 @@ arr.find((num, index) => {
     return false;
 });
 
-if () {
-    
+if (foundIndex !== -1) {
+    console.log(foundIndex);
+    console.log(arr[foundIndex]);
+} else {
+    console.log("Element not found");
 }
 var arr = [1, 2, 5, 6, 7, 8, 9, 6, 3, 6];
 
