@@ -6,7 +6,11 @@ var arr = str.split(',');
 if (cmd == "a-z") {
     var form1 = arr.sort((a, b) => a - b);
     alert(form1);
-} else if(cmd =="z-a" ) {
-    var form2 = arr.sort((a,b) => b-a);
+} else if (cmd == "z-a") {
+    var form2 = arr.sort((a, b) => b - a);
     alert(form2);
+} else if (cmd == "0-9") {
+    var form3 = arr.sort((a, b) => a - b);
+} else{
+    alert("invalid value");
 }
