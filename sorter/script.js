@@ -36,12 +36,12 @@ if (cmd == "a-z:0-9") {
     form2.sort(specialsortreverse);
     alert(form2.join(', '));
 } else if (cmd == "a-z") {
-    var charsOnly = arr.filter(item => !isNaN(item));
+    var charsOnly = arr.filter(item => isNaN(item));
     var form3 = charsOnly.sort();
     alert(form3.join(', '));
 }
 else if (cmd == "z-a") {
-    var charsOnly = arr.filter(item => !isNaN(item));
+    var charsOnly = arr.filter(item => isNaN(item));
     var form3 = charsOnly.sort().reverse();
     alert(form3.join(', '));
 }
